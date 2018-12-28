@@ -9,9 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
+todo
+
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
+* Studying at UoG 
 * M.S. in Jekyll, GitHub University, 2014
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
 
@@ -57,3 +59,5 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+
+For a full and up-to-date resume with more detail, see [here](https://docs.google.com/document/d/1hqqCTVeB45SaRqJ4mYwK6Sjdtx1uiCXLhInnSloWb34/edit?usp=sharing);
