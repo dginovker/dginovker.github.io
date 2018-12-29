@@ -1,10 +1,10 @@
 ---
 layout: archive
-title: "CV"
-permalink: /cv/
+title: "BlackBerry Coop"
+permalink: /blackberry-coop/
 author_profile: true
 redirect_from:
-  - /resume
+  - /blackberry-coop
 ---
 
 {% include base_path %}
