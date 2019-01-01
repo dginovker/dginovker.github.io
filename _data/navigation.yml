@@ -3,14 +3,14 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Github"
-    url: /github/
-
   - title: "Projects"
     url: /projects/
         
   - title: "BlackBerry Coop"
     url: /blackberry-coop/
+
+  - title: "GitHub"
+    url: /github/
 
   - title: "Contact"
     url: /contact/
