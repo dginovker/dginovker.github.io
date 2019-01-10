@@ -173,6 +173,9 @@ collections:
   project:
     output: true
     permalink: /:collection/:path/
+  coop:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -234,6 +237,15 @@ defaults:
   - scope:
       path: ""
       type: project
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _coop
+  - scope:
+      path: ""
+      type: coop
     values:
       layout: single
       author_profile: true
