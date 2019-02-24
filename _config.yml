@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Daniel Ginovker"
   avatar           : "portrait.png"
-  bio              : "Linux enthusiast, Wikipedia contributor and privacy advocate at the University of Guelph.<p>Currently pursuing a B.Comp. in Computer Science, with intentions following up in law."
+  bio              : "Linux enthusiast, Wikipedia contributor and privacy advocate at the University of Guelph.<p>Currently on the road to get a Juris Doctor degree."
   location         : "Guelph, Ontario"
   employer         :
   email            : "dcress01@uoguelph.ca"
@@ -95,7 +95,7 @@ author:
   facebook         :
   foursquare       :
   github           : "dginovker"
-  linkedin         : https://www.linkedin.com/in/daniel-ginovker/
+  linkedin         : daniel-ginovker/
   stackoverflow    : /10844607/dr-bracket
   youtube          :
   wikipedia        : "Dr-Bracket"
