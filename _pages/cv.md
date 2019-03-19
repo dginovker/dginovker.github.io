@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-For a full and up-to-date resume, see [here](https://docs.google.com/document/d/1hqqCTVeB45SaRqJ4mYwK6Sjdtx1uiCXLhInnSloWb34/edit?usp=sharing).
+For a full and up-to-date resume, see [here](https://docs.google.com/document/d/1NlvqyseJXZYehYzywS7LYSSpj9gwuHjUoboj6dbMiO8/edit?usp=sharing).
