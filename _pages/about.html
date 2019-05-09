@@ -27,29 +27,28 @@ Hello there! My name is Daniel Ginovker. I'm a 3rd year CS student at the Univer
 <p></p>
 
 <script>
-
-var dates = [new Date(2019, 01, 25)];
-
-function loadDaysSince() {
-
-    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-    var today = new Date();
-
-    document.getElementById("element0").innerHTML = 3;
-
-    var i;
-    for (i = 0; i < dates.length; i++) {
-        var diffDays = Math.round(Math.abs((dates[i] - today.getTime())/(oneDay)));
-        document.getElementById("element" + i).innerHTML = diffDays;
+    
+    var dates = [new Date(2019, 04, 07)];
+    
+    function loadDaysSince() {
+    
+        var oneDay = 24*60*60*1000; 
+        var today = new Date();
+    
+        document.getElementById("element0").innerHTML = 3;
+    
+        var i;
+        for (i = 0; i < dates.length; i++) {
+            var diffDays = Math.round(Math.abs((dates[i] - today.getTime())/(oneDay)));
+            document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + diffDays + ' days ago..&emsp;</i></font>';
+        }
     }
-}
-
+    
 </script>
 
 
 <body onload="loadDaysSince()">
-<font color="grey"><i><span id="element0"></span> days ago..&emsp;</i></font>
-Completed the <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle">Eight Queens Puzzle</a></p>
-
+<span id="element0"></span>
+Earned Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<p>
 
 </body>
