@@ -10,14 +10,14 @@ redirect_from:
 
 <p align="center">
     <img src="https://dginovker.github.io/files/aboutmd_image.jpg?raw=true" alt="Photo" style="width: 450px;"/>
-
 </p>
 
-Hello there! My name is Daniel Ginovker. I'm a 3rd year student at the University of Guelph, currently studying for the LSAT to pursue a career in CS Law.
+Welcome to my page! Here you can find all sorts of random information about my current pursuits. Check out my recent work below, my Github, or how I'm doing on my LSAT exams!
 
 <h2>Recent Stuff</h2>
 
 <ul>
+  <li>Mainnet release of anonymous tipping service, <a href="https://github.com/dginovker/MoneroTipper/">Monero Tip Bot</a>, 2 July 2019</li>
   <li>Pull request for tons of <a href=https://github.com/monero-project/research-lab/pull/48>Monero Research Lab meetings</a>, 02 Feburary 2019</li>
   <li><a href="https://dginovker.github.io/coop/blackberry-coop/">BlackBerry Coop Review</a>, 30 December 2018</li>
 </ul>
@@ -28,18 +28,17 @@ Hello there! My name is Daniel Ginovker. I'm a 3rd year student at the Universit
 
 <script>
     
-    var dates = [new Date(2019, 03, 07)];
+    var dates = [new Date(2019, 03, 07), new Date(2019, 03, 21)];
     
     function loadDaysSince() {
     
         var oneDay = 24*60*60*1000; 
         var today = new Date();
     
-        document.getElementById("element0").innerHTML = 3;
-    
         var i;
         for (i = 0; i < dates.length; i++) {
             var diffDays = Math.round(Math.abs((dates[i] - today.getTime())/(oneDay)));
+            document.getElementById("element" + i).innerHTML = 3;
             document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + diffDays + ' days ago..&emsp;</i></font>';
         }
     }
@@ -48,6 +47,8 @@ Hello there! My name is Daniel Ginovker. I'm a 3rd year student at the Universit
 
 
 <body onload="loadDaysSince()">
+<span id="element1"></span>
+Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a><p>
 <span id="element0"></span>
 Earned Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<p>
 
