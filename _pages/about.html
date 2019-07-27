@@ -28,7 +28,7 @@ Welcome to my page! Here you can find all sorts of random information about my c
 
 <script>
     
-    var dates = [new Date(2019, 03, 07), new Date(2019, 03, 21)];
+    var dates = [new Date(2019, 03, 07), new Date(2019, 03, 21), new Date(2019, 07, 26)];
     
     function loadDaysSince() {
     
@@ -38,8 +38,7 @@ Welcome to my page! Here you can find all sorts of random information about my c
         var i;
         for (i = 0; i < dates.length; i++) {
             var diffDays = Math.round(Math.abs((dates[i] - today.getTime())/(oneDay)));
-            document.getElementById("element" + i).innerHTML = 3;
-            document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + diffDays + ' days ago..&emsp;</i></font>';
+            document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + diffDays + ' days ago..</i></font>';
         }
     }
     
@@ -47,9 +46,13 @@ Welcome to my page! Here you can find all sorts of random information about my c
 
 
 <body onload="loadDaysSince()">
-<span id="element1"></span>
-Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a><p>
-<span id="element0"></span>
-Earned Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<p>
 
+<span id="element2"></span>
+Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean<br>
+
+<span id="element1"></span>
+Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a><br>
+
+<span id="element0"></span>
+Earned Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<br>
 </body>
