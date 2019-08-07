@@ -37,16 +37,14 @@ Welcome to my page! Here you can find all sorts of random information about my c
         var i;
         for (i = 0; i < dates.length; i++) {
             if (dates[i].getYear() == today.getYear() && dates[i].getMonth() == today.getMonth()) {
-                plural = dates[i].getDate() + 1 == today.getDate() ? "" : "s"
-                console.log("Same month!")
+                plural = dates[i].getDate() + 1 == today.getDate() ? "" : "s";
                 document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getDate() - dates[i].getDate()) + ' day' + plural + ' ago..</i></font>';
             } else if (dates[i].getYear() == today.getYear())
             {
-                plural = dates[i].getMonth() + 1 == today.getMonth() ? "" : "s"
-                console.log("Same year - should say month..")
+                plural = dates[i].getMonth() + 1 == today.getMonth() ? "" : "s";
                 document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getMonth() - dates[i].getMonth()) + ' month' + plural + ' ago..</i></font>';
             } else {
-                plural = dates[i].getYear() + 1 == today.getYear() ? "" : "s"
+                plural = dates[i].getYear() + 1 == today.getYear() ? "" : "s";
                 document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getYear() - dates[i].getYear()) + ' year' + plural + ' ago..</i></font>';
             }
         }
