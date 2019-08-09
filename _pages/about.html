@@ -26,19 +26,27 @@ Welcome to my page! Here you can find all sorts of random information about my c
 <h3>Activity Log</h3>
 <p></p>
 
-<script>
-    
-    var dates = [new Date(2019, 03, 07), new Date(2019, 03, 21), new Date(2019, 07, 26)];
+<script type="text/javascript">
     
     function loadDaysSince() {
+        var dates = [new Date(2019, 02, 07), new Date(2019, 02, 21), new Date(2019, 06, 26)];
     
         var oneDay = 24*60*60*1000; 
         var today = new Date();
     
         var i;
         for (i = 0; i < dates.length; i++) {
-            var diffDays = Math.round(Math.abs((dates[i] - today.getTime())/(oneDay)));
-            document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + diffDays + ' days ago..</i></font>';
+            if (dates[i].getYear() == today.getYear() && dates[i].getMonth() == today.getMonth()) {
+                plural = dates[i].getDate() + 1 == today.getDate() ? "" : "s";
+                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getDate() - dates[i].getDate()) + ' day' + plural + ' ago..</i></font>';
+            } else if (dates[i].getYear() == today.getYear())
+            {
+                plural = dates[i].getMonth() + 1 == today.getMonth() ? "" : "s";
+                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getMonth() - dates[i].getMonth()) + ' month' + plural + ' ago..</i></font>';
+            } else {
+                plural = dates[i].getYear() + 1 == today.getYear() ? "" : "s";
+                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getYear() - dates[i].getYear()) + ' year' + plural + ' ago..</i></font>';
+            }
         }
     }
     
@@ -54,5 +62,5 @@ Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a
 Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a><br>
 
 <span id="element0"></span>
-Earned Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<br>
+<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<br>
 </body>
