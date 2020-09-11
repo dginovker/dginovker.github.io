@@ -4,6 +4,8 @@ Inspiration: https://github.com/LantaoYu/lantaoyu.github.io
 
 ## Running
 
-`bundle clean`
-`bundle install`
-`bundle exec jekyll liveserve`
+```
+bundle clean
+bundle install
+bundle exec jekyll liveserve
+```
