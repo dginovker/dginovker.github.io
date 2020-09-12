@@ -9,12 +9,14 @@ Winter/Summer 2020 Workterm Report.
 September 10th, 2020.
 <br/><br/>
 
+NOTE: This page is still a WIP. Check back later!
+
 <div id="toc_container">
 <p class="toc_title">Table of Contents</p>
 <ul class="toc_list">
   <li><a href="#List_of_illustrations">List of Illustrations</a></li>
   <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#About_Manulife">About BlackBerry</a></li>
+  <li><a href="#About_Manulife">About Manulife</a></li>
   <li><a href="#Job_Description">Job Description</a></li>
     <ul>
       <li><a href="#Overview">Overview</a></li>
@@ -24,9 +26,9 @@ September 10th, 2020.
     </ul>
   <li><a href="#Goals">Goals</a></li>
     <ul>
-      <li><a href="#Learn_new_skill_sets">Learn new skill sets</a></li>
-      <li><a href="#Identify_my_weaknesses">Identify my weaknesses</a></li>
-      <li><a href="#Performance">Surpass expectations</a></li>
+      <li><a href="#Get_Involved">Get Involved</a></li>
+      <li><a href="#Help_the_Team">Help the Team</a></li>
+      <li><a href="#Develop_Lacking_Skills">Develop Lacking Skills</a></li>
     </ul>
   <li><a href="#Recommendations">Recommendations</a></li>
   <li><a href="#Conclusions">Conclusions</a></li>
@@ -63,10 +65,8 @@ As a Full Stack Developer, you do a little bit of everything in the software dev
 <h3 id="Overview">Full Stack Developer in the Canadian Division Technology at Manulife</h3>
 
 My primary role was developing an internal hiring tool used to automate onboarding for hiring managers at Manulife. While the company as a whole transformed many of its internal and customer facing tools over the years, one aspect still largly lacking was the hiring process - something nearly my entire team was dedicated to fixing.
-
+<br/><br/>
 Automating onboarding wasn't as easy as it could have been - largely due to internal company politics, rather than technical limitations. My tech lead however, Chris Jones (who I knew from Blackberry!), was determined to prove his worth and wasn't going to let anything stop him; we developed numerous workarounds on the backend, using everything from an official API, to testing RPA software, to developing web scraping and automation tools, to deciphering the network packets when on manual registrations and immitating them there.
-
-My primary role was to provide test suite results as soon as possible after a new productivity app build. The sooner we all got the tests done, the sooner we could debug or release a new build. Releases were usually done once or twice a week across two different app versions, where one would be hotfixing and the other would be development. Beyond test execution, my role involved building the test suite infrastructure, and working with developers to fix any problems that were being had.
 <br/><br/>
 <h3 id="Testing_experience">Testing Experience</h3>
 <center><i>Figure 2.0: Developers on Twitter enjoying the testing experience</i></br><img src="https://dginovker.github.io/files/developers_testing.jpg?raw=true" alt="Photo" style="width: 450px;" id="Developers_testing"/><br/></center>
@@ -98,45 +98,47 @@ Overall, the final result was a huge success, with many people requesting additi
 
 <h2 id="Goals">Goals</h2>
 
-<h3 id="Learn_new_skill_sets">Learn new skill sets</h3>
-Challenging yourself on a technical front was always a goal I had looking forwards to coop in general. I had heard that test automation development was a very <a href="https://en.wikipedia.org/wiki/Jack_of_all_trades,_master_of_none">Jack of all Trades</a> position, so I was excited to learn about all the tools they used - with the personal goal of knowing how I could set up a testing infrastructure from scratch, on my own.
+<h3 id="Get_Involved">Get Involved</h3>
+It's my final year at the University of Guelph, and I've only recently started getting involved with clubs, extracurricular programs, and other in-person events, and I've found that I love it. I know the most out of any year so far, and I wanted to put it to good use- getting involved sounded like a no-brainer for doing that.
 
-Needless to say, I learned <i>a lot</i>. In my spare time I do a lot of development work, but I never really understood what was going on behind the scenes. <i>How does the buildbot know how to run my program?</i>, or <i>What is this "test coverage" sheet they keep talking about?</i> where always questions <i>I kind of</i> knew the answer to... but not really. Yet that wass only the surface; because after working this role at BlackBerry, not only did I acheive my goal, but I also learned so many more things relating to test automation as well. In order of what I find most significant to least, 
+I knew from the get-go that Manulife had a lot of internal ways to get involved, so I leveraged that when planning out my semesters. With my team beinga part of hiring and onboarding, joining the internal coop hiring committee was one of the first things I did. It gave me the opportunity to develop many of my non-technical skills, as well as be on the other side of the recruiting process for once. Furthermore, entering my second semester, I was asked to run the subcommittee for Software coop hiring - another opportunity I took which proved very helpful for the rest of my term.
+
+Outside the hiring committee, when work turned remote, I started creating non-work related Slack channels to keep people engaged. One of the coop channels I created was the most active Slack channel for the month of June, and the Linux Slack channel grew to be one of the most active Slack channels for full time employees for a short time as well.
+
+Lastly, my efforts in this area didn't go unnoticed - when all the full time employees were given a day off work paid (and the coops weren't, for legal technicalities..), I was asked to help run an event for the coops that day so they could do something more fun at least. I developed an online pixelboard, and as a fun activity coops filled it out that day:
+
+TODO: FIGURE OF PIXEL BOARD
+
+<h3 id="Help_the_Team">Help the Team</h3>
+Being a coop, you're supposed to learn - but I also wanted to make a big impact. I wanted to be as helpful to my team as possible, so it wasn't just a one-way relationship. I was heavily motivated to complete this goal, so I worked hard to make it happen in a few different ways:
+
+<h4>Refactor to Redux</h4>
+On my own throughout the semester, I learned how to use a React library called Redux, which as the name suggests, heavily reduces the complexity of the app. Having become sophisticated with the library outside work hours, I was able to add the task to our sprint board and complete it no hassle - significantly reducing code debt in one of our main projects.
+
+<h4>Test Coverage</h4>
+Who likes testing?? Well.. I sometimes do. There's nothing more satisyfing than knocking out some test coverage on a casual week. For the first time in 5 months, our project had full minimum test coverage (65% of each file), something I worked on casually over the course of 3 weeks near the end of my first semester. This actually ended up being a huge help towards the end of my second term, when my tech lead was leaving the company but also trying to push our app to production right before he left - our high test coverage allowed him to quickly make changes without lowering our quality score too much and get it done in time. Thanks to that, even with him offboarding, our app had crossed the most difficult lines and thrived!
+
+<h3 id="Develop_Lacking_Skills">Develop Lacking Skills</h3>
+Manulife takes serious investment into their employees. It's something I will always respect the company for, since it's so uncommon for a company to effecitvely teach their employees what they need to find a different job. Yet, in one town hall, that's almost exactly what one of our VPs said; if it boosts moral, confidence, and you feel like Manulife cares about you, that's better than keeping employees working there for their entire career. And Manulife seriously believed in that.
+
+I took heavy advantage of the free learning courses Manulife purchased for their employees and contractors. Pluralsight was one of them - sort of a premium, paid version of Khan Academy - and you were seriously encouraged to use it! Through skill assessments, Pluralsight courses, and so much more, I learned skills both relevant to my work projects, and ones I worked on at home. Blocking off 4 hours of my calendar on Friday to learn something I would have otherwise learned in school was fantastic, and it really padded my resume too. Some skills that I upscaled using Pluralsight include:
+
 <ul>
-  <li>Android Espresso</li>
-  <li>Ui Automator</li>
-  <li>Jenkins</li>
-  <li>Gradle tasks</li>
-  <li>Gerrit code reviews</li>
+    <li>Bootstrap</li>
+    <li>React</li>
+    <li>Redux</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Node</li>
+    <li>Azure Cloud Functions</li>
 </ul>
 
-as well as many general testing practices. I am now in a fairly confident place where I could set up and build testing infrastructure for any one of my projects that might need it next. Even during the semester, as I went along, I began to really feel more insight with all my other tools and understanding the checks they would perform after a successful compile and prior to a deployment for users to run.
-
-<h3 id="Performance">Performance</h3>
-When I first heard that BlackBerry had accepted me as a coop, I endured a giant rush of joy and relief. I was excited to go to Waterloo where many of my friends lived, excited to see the BlackBerry headquarters, and I was excited to think what my daily life routine might be. But then I had a thought - I realized it was one thing to get in and be accepted, but it was another to prove my worth.
-<br/><br/>
-I set out with a very straightforward goal, of <i>do well</i>, <i>impress my managers</i>, and <i>uphold the reputation of Guelph</i>. I had a lot of fears, worries and doubts, but I knew that I could do it if I just worked hard and continued to push myself. So long as I wasn't bored and was doing my best, it seemed like a plan that wouldn't fail. But how would I measure it? How would I know if I performed well? It seemed a bit difficult, so I broke it into two ways.
-<br/><br/>
-The first was to see how frequently I would receive good feedback on my work. For me it was a very passive way to determine how I was keeping up, and whether I was meeting or exceeding my manager's expectations. I often asked for feedback and made sure to genuinely adjust to it, and as the term went on I continued to improve on my performance and do a better job.
-<br/><br/> 
-The second, and the bigger measurement I strived for - was "Will my manager <i>ask me</i> to come back?". In my mind, if a coop does a good enough job to be welcomed back to the position, they must have had a strong performance. To achieve this, I continuously pushed myself and found more work. If my tasks for the sprint were complete, and all my tests were run, the last thing I would do is sit back and relax. I would seek out extra work from my manager, or if he was busy, I would find work on my own, whether it was improving something that I used regularly or even updating documentation on the wiki. Through this method I inadvertently started what would become my main project, and through this extra initiative I had earned what I had strived for; a personal invitation from my manager to come back next year.
-
-<h3 id="Identify_my_weaknesses">Identify my weaknesses</h3>
-I've always been a strong programmer, and that was never really my worry. I used to think my weakness was quickly learning the ropes of a large project, but looking back that isn't so much a weakness as something every programmer has to deal with throughout their career. The best way to really determine if I had a weakness would be to have an identifiable problem I can look at, and see what I can do to make it better.
-<br/><br/>
-And my manager, Patrick Lam, helped me do just that.
-<br/><br/>
-I never had an issue with my performance or the quality of my deliverables - but for some reason, my performance would slow down when I worked with a team. For the first month and entering the second, I blamed it on a lot of things. <i>"Ohh, these meetings are so useless.. I could have coded it by now"</i> or <i>"Oh come on, I can do his part better than he can"</i> were some of the excuses I always told myself. But the truth was, it was me. I simply didn't want to hear what other people had to say because <i>I</i> wasn't willing to accept I could be wrong.
-<br/><br/>
-I personally feel like it wasn't a conclusion that I was willing to accept, because in hindsight it seems to obvious. One individual in particular who really helped me see that way was a full-time employee, Chris, who worked on the development of productivity apps. We were talking about interviews, and he mentioned that he doesn't care if the candidate knows anything coming in, or if they can write fancy algorithms on a whiteboard - only if they're willing to accept other people and adopt to their different points of views. I jokingly replied that I would fail his interview, to which he replied "at least you realize that"... Which left me quite shocked in the moment, because it was entirely true. 
-<br/><br/>
-After some back and forth with my manager and some other coops who knew how I worked quite well, one of the things I began to heavily focus on was my teamwork and communication skills. I remember thinking it seemed silly at first, but it just seemed to make the days so much easier and the work so much less stressful - and over time, as reflected in my one-on-one meetings with my manager, I began to improve. Moving forward, and after my exit interview with my manager, I now realize that communication and teamwork are not just checkboxes that I have to check off; but they're actually things you have to work on as hard as anything else to do. They are key elements of a working environment that I know I need to improve, and so I now know they will be my future my goals of things I would like to do.
+..and so much more. While I started strongest in the back end side of things, by the time I left Manulife, front end development was one of my strong suites, and Javascript became my favorite langauge.
 
 <h2 id="Recommendations">Recommendations</h2>
-I found that I had a significant number of meetings - many of which I didn't need to be a part of, or of the 1-hour meeting only five minutes would be distantly relevant to anything I was doing. Between the test automation meetings and the CCNT test automation meetings, only one of the two were really necessary. For the greater team meeting, in which everyone under Jeremy's organization gives an update for what they've been doing that week, I feel like it could be better done in a mattermost channel instead. Overall, the time spent in meetings adds up substantially, and even when working through them it feels greatly unnecessary at times.
+While Manulife was the best coop experience I had so far, there were some things I wish I could change. Great people were let go from the company, and other great people left on their own accord. Part of me wishes the company succeeded at keeping good talent, and they certainly try to by having opportunities to thank your coworkers and have it seen by management, but I feel like the evidence that great people left the company (either on their own or were let go) shows that it doesn't really work. If I'm honest, I don't know exactly what the solution to this problem would be, and I know they've tried multiple solutions, but it's still a problem they face at the end of the day.
 <br/><br/>
-I also feel like the onboarding experience was a bit too much to absorb; while in hindsight it seems like a very fufilling way to bring the new hires to the team, it only seems that way since I now understand everything that was going on back then. At the time, I found it to be too much abstract information that wasn't sticking no matter how hard I tried to apply it. Each technical lead gave too little depth on too many subjects to follow along, and while it was far from a waste of time, it could have been better with some hands-on activities in the mix at a slightly slower pace, and with a bit less coverage.
-
+My other recommendation is a little more light hearted, and something I did some minor pushes for myself, although I admit it was a little unfeasible; but allow developers to run Linux on their laptops instead of just Windows/MacOS. The tools, software, speed and ability to write code effectively on Linux is debated, but as someone who uses both Windows 10 and Linux frequently, I have to admit they're not even close. The control developers have over their own computers, and the customization they can provide themselves using Linux is unmatched. If you want to increase developer motivation and productivity further, allow Linux to be flashed onto the laptops!
 
 <h2 id="Conclusions">Conclusions</h2>
 The experience I had as a test automation development student at BlackBerry was fast paced, and at times very rewarding. It allowed me to learn tons of new testing and Android development tools, while ensuring I was never giving a task I couldn't complete. One of my favorite parts about the experience was just the time allocated to do my own thing, from trying new outreach on projects to working on something wildly different every month. My goals and expectations were met and my performance exceeded, and a bit takeaway is I now  know where I can focus for improvement in my future positions. 
