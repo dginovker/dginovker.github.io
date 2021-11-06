@@ -20,6 +20,4 @@ bundle clean ; bundle install ; bundle exec jekyll liveserve --host 0.0.0.0
 
 ## Todo
 
-* Make any dcress01@uoguelph.ca become danielginovker@gmail.com
 * Make Docker file run the bundle commands automatically
-* Fix Manulife image missing from Coop?
