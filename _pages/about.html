@@ -14,18 +14,12 @@ redirect_from:
 
 Welcome to my page! You can find most of the stuff I work on here, usually at the top. Sometimes I update here when
 interesting things happen, but most of that activity can be found on my <a
-  href="https://github.com/dginovker">Github<a>.
+  href="https://github.com/dginovker">Github</a>.
 
 
     <h2>Recent Stuff</h2>
 
-    <ul>
-      <li>Handoff of <a href="https://2009scape.org/">2009scape</a> to one of the best communities I've ever been a part
-        of, 1 June 2020</li>
-      <li>Started <a href="https://ourkorean.com/">OurKorean</a>, the best way to learn Korean through Music ❤️, 18 May
-        2020</li>
-      <li>Mainnet release of anonymous tipping service, <a href="https://github.com/dginovker/MoneroTipper/">Monero Tip
-          Bot</a>, 2 July 2019</li>
+    <ul id="most-recent">
     </ul>
 
     <p></p>
@@ -36,10 +30,35 @@ interesting things happen, but most of that activity can be found on my <a
     <p></p>
 
     <script type="text/javascript">
-      let forceIndex = 1; // The number of times I've had to force update Github Pages..
-
-      // Most recent ones first
-      let activities = [
+      const activities = [
+        {
+          date: new Date(2021, 09, 23),
+          activity: `Created <a href="https://xmr-donate.web.app/">xmr-donate</a>, a place to donate your Monero to other projects`
+        },
+        {
+          date: new Date(2021, 09, 16),
+          activity: `Made first of several Arch Linux <a href="https://aur.archlinux.org/packages/?SeB=m&K=Dr-Bracket">packages</a>`
+        },
+        {
+          date: new Date(2021, 04, 25),
+          activity: `Founded <a href="https://openredsoftware.com/">Open Red Software</a>, a not for profit corporation to support Open Source`
+        },
+        {
+          date: new Date(2021, 00, 04),
+          activity: `Joined <a href="https://www.puzzlecats.com/">Puzzle Cats Inc</a> to make some sick games 📱`
+        },
+        {
+          date: new Date(2020, 07, 20),
+          activity: `Extended Manulife coop into part time`
+        },
+        {
+          date: new Date(2020, 05, 18),
+          activity: `Started <a href="https://ourkorean.com/">OurKorean</a>, the best way to learn Korean through Music ❤️`
+        },
+        {
+          date: new Date(2020, 05, 01),
+          activity: `Handoff of <a href="https://2009scape.org/">2009scape</a> to community`
+        },
         {
           date: new Date(2020, 01, 19),
           activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
@@ -47,6 +66,11 @@ interesting things happen, but most of that activity can be found on my <a
         {
           date: new Date(2019, 06, 26),
           activity: `Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean`
+        },
+        {
+          date: new Date(2019, 06, 02),
+          activity: `Mainnet release of anonymous tipping service, <a href="https://github.com/dginovker/MoneroTipper/">Monero Tip
+          Bot</a>`
         },
         {
           date: new Date(2019, 02, 21),
@@ -59,18 +83,19 @@ interesting things happen, but most of that activity can be found on my <a
       ]
 
       function loadActivities() {
-        // add all the stuff in recent stuff
-        // add joined PuzzleCats
-        // add founded openredsoftware
-        // add made first AUR package
-        // add xmr-donate
+        console.log(`Loading activities`);
 
-        activities.forEach(a => {
+        let li = document.createElement("li");
+        li.innerHTML = getTimeAgo(activities[0].date) + activities[0].activity;
+        document.getElementById("most-recent").append(li);
+
+        for (let i = 1; i < activities.length; i++) {
+          let a = activities[i];
           let log = document.createElement("span");
           log.innerHTML = getTimeAgo(a.date) + a.activity;
           document.getElementById("activity-log").appendChild(log);
           document.getElementById("activity-log").innerHTML += `<br />`;
-        });
+        }
 
         var oneDay = 24 * 60 * 60 * 1000;
         var today = new Date();
@@ -92,4 +117,5 @@ interesting things happen, but most of that activity can be found on my <a
         }
       }
 
+      window.onload = loadActivities();
     </script>

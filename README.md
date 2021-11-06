@@ -25,3 +25,4 @@ bundle clean ; bundle install ; bundle exec jekyll liveserve --host 0.0.0.0
 * Make Docker file run the bundle commands automatically
 * Change desc to "Projects solving real problems"
 * Add Hover for date on "time ago.."s
+* Fix Manulife image missing from Coop?
