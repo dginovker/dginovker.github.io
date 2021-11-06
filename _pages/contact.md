@@ -9,5 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-Email: dcress01@uoguelph.ca
+Email: danielginovker@gmail.com
+<br />
 LinkedIn: [linkedin.com/in/daniel-ginovker](https://www.linkedin.com/in/daniel-ginovker/)
