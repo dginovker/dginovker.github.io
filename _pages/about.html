@@ -30,47 +30,66 @@ Welcome to my page! You can find most of the stuff I work on here, usually at th
 <script type="text/javascript">
     let forceIndex = 1; // The number of times I've had to force update Github Pages..
     
-    function loadDaysSince() {
+    let activities = [
+        {
+            date: new Date(2019, 02, 07),
+            activity: `<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights`
+        },
+        {
+            date: new Date(2019, 02, 21),
+            activity: `Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a>`
+        },
+        {
+            date: new Date(2019, 06, 26),
+            activity: `Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean`
+        },
+        {
+            date: new Date(2020, 01, 19),
+            activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
+        }
+    ]
+
+    function loadActivities() {
         // add all the stuff in recent stuff
         // add joined PuzzleCats
         // add founded openredsoftware
         // add made first AUR package
         // add xmr-donate
-        var dates = [new Date(2019, 02, 07), new Date(2019, 02, 21), new Date(2019, 06, 26), new Date(2020, 01, 19)];
     
+        activities.forEach(a => {
+            console.log(a);
+            let log = document.createElement("span");
+            log.innerHTML = getTimeAgo(a.date) + a.activity;
+            document.getElementById("activity-log").appendChild(log);
+            document.getElementById("activity-log").innerHTML += `<br />`;
+        });
+
         var oneDay = 24*60*60*1000; 
         var today = new Date();
+    }
+
+    function getTimeAgo(date) {
+        const oneDay = 24*60*60*1000; 
+        const today = new Date();
     
-        var i;
-        for (i = 0; i < dates.length; i++) {
-            if (dates[i].getYear() == today.getYear() && dates[i].getMonth() == today.getMonth()) {
-                plural = dates[i].getDate() + 1 == today.getDate() ? "" : "s";
-                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getDate() - dates[i].getDate()) + ' day' + plural + ' ago..</i></font>';
-            } else if (dates[i].getYear() == today.getYear())
-            {
-                plural = dates[i].getMonth() + 1 == today.getMonth() ? "" : "s";
-                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getMonth() - dates[i].getMonth()) + ' month' + plural + ' ago..</i></font>';
-            } else {
-                plural = dates[i].getYear() + 1 == today.getYear() ? "" : "s";
-                document.getElementById("element" + i).innerHTML = '<font color="grey"><i> ' + (today.getYear() - dates[i].getYear()) + ' year' + plural + ' ago..</i></font>';
-            }
+        if (date.getYear() == today.getYear() && date.getMonth() == today.getMonth()) {
+            plural = date.getDate() + 1 == today.getDate() ? "" : "s";
+            return '<font color="grey"><i> ' + (today.getDate() - date.getDate()) + ' day' + plural + ' ago..</i></font> ';
+        } else if (date.getYear() == today.getYear())
+        {
+            plural = date.getMonth() + 1 == today.getMonth() ? "" : "s";
+            return '<font color="grey"><i> ' + (today.getMonth() - date.getMonth()) + ' month' + plural + ' ago..</i></font> ';
+        } else {
+            plural = date.getYear() + 1 == today.getYear() ? "" : "s";
+            return '<font color="grey"><i> ' + (today.getYear() - date.getYear()) + ' year' + plural + ' ago..</i></font> ';
         }
     }
     
 </script>
 
 
-<body onload="loadDaysSince()">
+<body onload="loadActivities()">
+    <div id="activity-log">
 
-<span id="element3"></span>
-Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp<br>
-
-<span id="element2"></span>
-Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean<br>
-
-<span id="element1"></span>
-Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a><br>
-
-<span id="element0"></span>
-<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights<br>
+    </div>
 </body>
