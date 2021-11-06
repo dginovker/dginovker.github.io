@@ -20,9 +20,7 @@ bundle clean ; bundle install ; bundle exec jekyll liveserve --host 0.0.0.0
 
 ## Todo
 
-* Make about.md images smaller
 * Make any dcress01@uoguelph.ca become danielginovker@gmail.com
 * Make Docker file run the bundle commands automatically
-* Change desc to "Projects solving real problems"
 * Add Hover for date on "time ago.."s
 * Fix Manulife image missing from Coop?

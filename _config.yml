@@ -81,11 +81,11 @@ analytics:
 # Site Author
 author:
   name             : "Dan Ginovker"
-  avatar           : "portrait.png"
-  bio              : "Projects that solve real problems."
+  avatar           : "portrait-smaller.png"
+  bio              : "Projects solving real problems"
   location         : "Waterloo, Ontario"
   employer         :
-  email            : "dcress01@uoguelph.ca"
+  email            : "danielginovker@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
