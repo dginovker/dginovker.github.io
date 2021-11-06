@@ -30,23 +30,24 @@ Welcome to my page! You can find most of the stuff I work on here, usually at th
 <script type="text/javascript">
     let forceIndex = 1; // The number of times I've had to force update Github Pages..
     
+    // Most recent ones first
     let activities = [
         {
-            date: new Date(2019, 02, 07),
-            activity: `<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights`
-        },
-        {
-            date: new Date(2019, 02, 21),
-            activity: `Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a>`
+            date: new Date(2020, 01, 19),
+            activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
         },
         {
             date: new Date(2019, 06, 26),
             activity: `Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean`
         },
         {
-            date: new Date(2020, 01, 19),
-            activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
-        }
+            date: new Date(2019, 02, 21),
+            activity: `Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a>`
+        },
+        {
+            date: new Date(2019, 02, 07),
+            activity: `<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights`
+        },
     ]
 
     function loadActivities() {
@@ -84,11 +85,13 @@ Welcome to my page! You can find most of the stuff I work on here, usually at th
             return '<font color="grey"><i> ' + (today.getYear() - date.getYear()) + ' year' + plural + ' ago..</i></font> ';
         }
     }
+
+    loadActivities();
     
 </script>
 
 
-<body onload="loadActivities()">
+<body>
     <div id="activity-log">
 
     </div>
