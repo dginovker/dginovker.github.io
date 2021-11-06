@@ -105,16 +105,18 @@ interesting things happen, but most of that activity can be found on my <a
         const oneDay = 24 * 60 * 60 * 1000;
         const today = new Date();
 
+        let xago = "";
+        
         if (date.getYear() == today.getYear() && date.getMonth() == today.getMonth()) {
-          plural = date.getDate() + 1 == today.getDate() ? "" : "s";
-          return '<font color="grey"><i> ' + (today.getDate() - date.getDate()) + ' day' + plural + ' ago..</i></font> ';
+          xago = `${today.getDate() - date.getDate()} day${date.getDate() + 1 == today.getDate() ? "" : "s"}`;
         } else if (date.getYear() == today.getYear()) {
-          plural = date.getMonth() + 1 == today.getMonth() ? "" : "s";
-          return '<font color="grey"><i> ' + (today.getMonth() - date.getMonth()) + ' month' + plural + ' ago..</i></font> ';
+          xago = `${today.getMonth() - date.getMonth()} month${date.getMonth() + 1 == today.getMonth() ? "" : "s"}`;
         } else {
-          plural = date.getYear() + 1 == today.getYear() ? "" : "s";
-          return '<font color="grey"><i> ' + (today.getYear() - date.getYear()) + ' year' + plural + ' ago..</i></font> ';
+          xago = `${today.getYear() - date.getYear()} year${date.getYear() + 1 == today.getYear() ? "" : "s"}`;
         }
+
+        return `<font color="grey"><i><span title="${date.toLocaleString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })
+}"> ${xago} ago..</span></i></font> `;
       }
 
       window.onload = loadActivities();
