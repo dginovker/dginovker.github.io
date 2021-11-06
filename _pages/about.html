@@ -30,6 +30,9 @@ interesting things happen, but most of that activity can be found on my <a
 
     <p></p>
     <h3>Activity Log</h3>
+    <div id="activity-log" onload="loadActivities()">
+
+    </div>
     <p></p>
 
     <script type="text/javascript">
@@ -63,7 +66,6 @@ interesting things happen, but most of that activity can be found on my <a
         // add xmr-donate
 
         activities.forEach(a => {
-          console.log(a);
           let log = document.createElement("span");
           log.innerHTML = getTimeAgo(a.date) + a.activity;
           document.getElementById("activity-log").appendChild(log);
@@ -90,13 +92,4 @@ interesting things happen, but most of that activity can be found on my <a
         }
       }
 
-      loadActivities();
-
     </script>
-
-
-    <body>
-      <div id="activity-log">
-
-      </div>
-    </body>
