@@ -3,96 +3,100 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+redirect_from:
+- /about/
+- /about.html
 ---
 
 <p align="center">
-    <img src="https://dginovker.github.io/files/aboutmd_image.jpg?raw=true" alt="Photo" style="width: 450px;"/>
+  <img src="https://dginovker.github.io/files/aboutmd_image.jpg?raw=true" alt="Photo" style="width: 450px;" />
 </p>
 
-Welcome to my page! You can find most of the stuff I work on here, usually at the top. Sometimes I update here when interesting things happen, but most of that activity can be found on my <a href="https://github.com/dginovker">Github<a>.
+Welcome to my page! You can find most of the stuff I work on here, usually at the top. Sometimes I update here when
+interesting things happen, but most of that activity can be found on my <a
+  href="https://github.com/dginovker">Github<a>.
 
 
-<h2>Recent Stuff</h2>
+    <h2>Recent Stuff</h2>
 
-<ul>
-  <li>Handoff of <a href="https://2009scape.org/">2009scape</a> to one of the best communities I've ever been a part of, 1 June 2020</li>
-  <li>Started <a href="https://ourkorean.com/">OurKorean</a>, the best way to learn Korean through Music ❤️, 18 May 2020</li>
-  <li>Mainnet release of anonymous tipping service, <a href="https://github.com/dginovker/MoneroTipper/">Monero Tip Bot</a>, 2 July 2019</li>
-</ul>
+    <ul>
+      <li>Handoff of <a href="https://2009scape.org/">2009scape</a> to one of the best communities I've ever been a part
+        of, 1 June 2020</li>
+      <li>Started <a href="https://ourkorean.com/">OurKorean</a>, the best way to learn Korean through Music ❤️, 18 May
+        2020</li>
+      <li>Mainnet release of anonymous tipping service, <a href="https://github.com/dginovker/MoneroTipper/">Monero Tip
+          Bot</a>, 2 July 2019</li>
+    </ul>
 
-<p></p>
-<h3>Activity Log</h3>
-<p></p>
+    <p></p>
+    <h3>Activity Log</h3>
+    <p></p>
 
-<script type="text/javascript">
-    let forceIndex = 1; // The number of times I've had to force update Github Pages..
-    
-    // Most recent ones first
-    let activities = [
+    <script type="text/javascript">
+      let forceIndex = 1; // The number of times I've had to force update Github Pages..
+
+      // Most recent ones first
+      let activities = [
         {
-            date: new Date(2020, 01, 19),
-            activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
+          date: new Date(2020, 01, 19),
+          activity: `Winner of <a href="http://2020.cusec.net/">CUSEC 2020</a> Demo Camp`
         },
         {
-            date: new Date(2019, 06, 26),
-            activity: `Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean`
+          date: new Date(2019, 06, 26),
+          activity: `Personal <a href="https://github.com/dginovker/KoreanNouns">browser extension</a> to help learn Korean`
         },
         {
-            date: new Date(2019, 02, 21),
-            activity: `Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a>`
+          date: new Date(2019, 02, 21),
+          activity: `Start of <a href="https://github.com/dginovker/MoneroTipper/commit/e3858801f6bf29a904f03ff801a76ba3d36dc1a0">Monero Tip Bot</a>`
         },
         {
-            date: new Date(2019, 02, 07),
-            activity: `<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights`
+          date: new Date(2019, 02, 07),
+          activity: `<a href="https://en.wikipedia.org/wiki/Special:Log?type=rights&user=&page=User%3ADr-Bracket&wpdate=&tagfilter=&subtype=">Granted</a> Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#Extended_confirmed_protection">Extended Confirmed Protection</a> edit rights`
         },
-    ]
+      ]
 
-    function loadActivities() {
+      function loadActivities() {
         // add all the stuff in recent stuff
         // add joined PuzzleCats
         // add founded openredsoftware
         // add made first AUR package
         // add xmr-donate
-    
+
         activities.forEach(a => {
-            console.log(a);
-            let log = document.createElement("span");
-            log.innerHTML = getTimeAgo(a.date) + a.activity;
-            document.getElementById("activity-log").appendChild(log);
-            document.getElementById("activity-log").innerHTML += `<br />`;
+          console.log(a);
+          let log = document.createElement("span");
+          log.innerHTML = getTimeAgo(a.date) + a.activity;
+          document.getElementById("activity-log").appendChild(log);
+          document.getElementById("activity-log").innerHTML += `<br />`;
         });
 
-        var oneDay = 24*60*60*1000; 
+        var oneDay = 24 * 60 * 60 * 1000;
         var today = new Date();
-    }
+      }
 
-    function getTimeAgo(date) {
-        const oneDay = 24*60*60*1000; 
+      function getTimeAgo(date) {
+        const oneDay = 24 * 60 * 60 * 1000;
         const today = new Date();
-    
+
         if (date.getYear() == today.getYear() && date.getMonth() == today.getMonth()) {
-            plural = date.getDate() + 1 == today.getDate() ? "" : "s";
-            return '<font color="grey"><i> ' + (today.getDate() - date.getDate()) + ' day' + plural + ' ago..</i></font> ';
-        } else if (date.getYear() == today.getYear())
-        {
-            plural = date.getMonth() + 1 == today.getMonth() ? "" : "s";
-            return '<font color="grey"><i> ' + (today.getMonth() - date.getMonth()) + ' month' + plural + ' ago..</i></font> ';
+          plural = date.getDate() + 1 == today.getDate() ? "" : "s";
+          return '<font color="grey"><i> ' + (today.getDate() - date.getDate()) + ' day' + plural + ' ago..</i></font> ';
+        } else if (date.getYear() == today.getYear()) {
+          plural = date.getMonth() + 1 == today.getMonth() ? "" : "s";
+          return '<font color="grey"><i> ' + (today.getMonth() - date.getMonth()) + ' month' + plural + ' ago..</i></font> ';
         } else {
-            plural = date.getYear() + 1 == today.getYear() ? "" : "s";
-            return '<font color="grey"><i> ' + (today.getYear() - date.getYear()) + ' year' + plural + ' ago..</i></font> ';
+          plural = date.getYear() + 1 == today.getYear() ? "" : "s";
+          return '<font color="grey"><i> ' + (today.getYear() - date.getYear()) + ' year' + plural + ' ago..</i></font> ';
         }
-    }
+      }
 
-    loadActivities();
-    
-</script>
+      loadActivities();
+
+    </script>
 
 
-<body>
-    <div id="activity-log">
+    <body>
+      <div id="activity-log">
 
-    </div>
-</body>
+      </div>
+    </body>
